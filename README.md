@@ -51,8 +51,7 @@ Nevertheless I will offer you a small overview of the functions, which are in th
 How does ASR work?
 ------------------
 The window, where the rendered image will be presented can be thought of as a grid with a x and y axis. 
-![alt text][logo]
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+![gridimage](https://github.com/anotherSimpleCoder/asr-v1/blob/master/misc/gridAxis.jpg?raw=true)
 
 The length of the x axis is determined by the defined screen width, while the length of the y axis is defined by the screen height.
 The grid is contrcuted by so called "blocks", which is realised by squaqres in SDL. And every block has a block size b. 
