@@ -1,4 +1,4 @@
-SDL_FLAGS = -I /usr/include/SDL2 -D_REENTRANT
+SDL_FLAGS = -I /usr/local/include/SDL2 -D_REENTRANT
 
 CFLAGS = $(SDL_FLAGS) -I header
 
@@ -8,10 +8,17 @@ LIBS = -lSDL2
 
 BIN_NAME = asr.so
 
+STATIC_NAME = asr.a
+
 compile:
-	g++ -fPIC $(CFLAGS) -c src/*.cpp $(OPTIONS)
-	g++ -shared $(LIBS) -fPIC -o $(BIN_NAME) *.o $(OPTIONS)
+	clang++ -fPIC $(CFLAGS) -c src/*.cpp $(OPTIONS)
+	clang++ -shared $(LIBS) -fPIC -o $(BIN_NAME) *.o $(OPTIONS)
 	rm *.o	
+
+compileStatic:
+	clang++ $(CFLAGS) -c src/*.cpp $(OPTIONS)
+	ar rvs $(STATIC_NAME) *.o
+	rm *.o
 
 remove:
 	rm $(BIN_NAME)
