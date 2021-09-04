@@ -43,6 +43,12 @@ clang++ -I <path to the asr header files> -D_REENTRANT -c main.cpp
 clang++ asr.dylib -o <name of your program> main.o 
 ```
 
+Linux:
+```bash
+clang++ -I <path to the asr header files> -D_REENTRANT -c main.cpp
+clang++ asr.so -o <name of your program> main,o
+```
+
 #### g++:
 
 macOS:
@@ -50,6 +56,11 @@ macOS:
 g++ -I <path to the asr header files> -D_REENTRANT -c main.cpp
 g++ asr.dylib -o <name of your program> main.o
 ```
+
+Linux:
+```bash
+g++ -I <path to the ase header files> -D_REENTRANT -c main.cpp
+g++ asr.so -o <name of your program> main.o
 
 ASR functions
 -------------
