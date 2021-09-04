@@ -61,6 +61,7 @@ Linux:
 ```bash
 g++ -I <path to the ase header files> -D_REENTRANT -c main.cpp
 g++ asr.so -o <name of your program> main.o
+```
 
 ASR functions
 -------------
