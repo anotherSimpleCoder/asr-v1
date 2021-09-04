@@ -44,6 +44,8 @@ clang++ asr.dylib -o <name of your program> main.o
 ```
 
 #### g++:
+
+macOS:
 ```bash
 g++ -I <path to the asr header files> -D_REENTRANT -c main.cpp
 g++ asr.dylib -o <name of your program> main.o
