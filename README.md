@@ -7,16 +7,13 @@ ASR stands for "A Simple Renderer" and is a simple 2D Renderer, which is based o
 
 Get started
 -----------
-To use ASR you also have to get the SDL2 framework, which you can get here: https://www.libsdl.org/
-After that you move the files to it's respective folders in your projects. 
-(source files to source folder, header files to header folder)
-
+There is no need to download SDL since it is already included in the library (both in include files and the library).
 In order to use the ASR commands add the following line on the beginning of your cpp file.
 
 ```cpp
 #include "asr.h
 ```
-That's it! You're now able to use the ASR "library".
+That's it! You're now able to use the ASR library in your project.
 
 
 Use ASR in your project
@@ -32,6 +29,28 @@ Now you can call every ASR function by typing
 ```cpp
 a.<your asr function>;
 ```
+
+Compilation
+-----------
+
+In order to compile your project with asr you have to spcify to the compiler the include directoy and the path to the dynamic library file.
+
+#### clang:
+
+macOS:
+```bash
+clang++ -I <path to the asr header files> -D_REENTRANT -c main.cpp
+clang++ asr.dylib -o <name of your program> main.o 
+```
+
+#### g++:
+```bash
+g++ -I <path to the asr header files> -D_REENTRANT -c main.cpp
+g++ asr.dylib -o <name of your program> main.o
+```
+
+
+#### Visual Studio:
 
 ASR functions
 -------------
