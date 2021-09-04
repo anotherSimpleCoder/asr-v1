@@ -51,9 +51,6 @@ g++ -I <path to the asr header files> -D_REENTRANT -c main.cpp
 g++ asr.dylib -o <name of your program> main.o
 ```
 
-
-#### Visual Studio:
-
 ASR functions
 -------------
 All the functions, which are offered by ASR can be seen in the asr.h file with commands explaining the functionality and parameters of each function.
