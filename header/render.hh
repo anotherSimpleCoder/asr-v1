@@ -1,7 +1,7 @@
 #pragma once
 #include "SDL.h"
-#include "screen.h"
-#include "colorDim.h"
+#include "screen.hh"
+#include "colorDim.hh"
 
 
 /*
